@@ -1,0 +1,149 @@
+/* public/css/style.css */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .sidebar {
+    background-color: white;
+    padding: 20px;
+    width: 200px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px;
+    border-right: solid grey;
+  }
+  
+  .profile {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+  
+  .sidebar nav a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .sidebar nav a:hover {
+    background-color: #ddd;
+  }
+  
+  .logout {
+    margin-top: auto;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 7px;
+    width: 90%;
+  }
+  
+  .main-content {
+    flex: 1;
+    display: grid;
+    padding: 20px;
+    align-items: start;
+  }
+  
+  .metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+  .metric {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  .pie-chart {
+    margin-top: 20px;
+    width: 500px;
+    height: 300px;
+    margin:auto ;
+    margin-top: 20px;
+    background-color: white;
+  }
+.metrics a{
+  text-decoration: none;
+  color: inherit;
+}
+.metrics a:hover .metric {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+.metrics .metric {
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+  /* Opsi 1: Background image dengan cover */
+  background-image: url("Naruto wallapper.jpg");
+  background-size:cover;
+  background-position: center;
+  color: white; /* Ubah warna teks agar kontras */
+}
+.pie-chart img {
+    display: block;
+    max-width: 100%; /* Pastikan gambar tidak lebih besar dari container */
+    max-height: 100%; /* Batasi tinggi maksimum */
+    margin: auto; /* Rata tengah */
+    object-fit: cover; /* Gambar akan dipotong agar proporsional */
+    border-radius: 10px; /* Opsional: Tambahkan radius untuk estetika */
+}
+  .pie-chart {
+    width: 50%; /* Sesuaikan ukuran dengan kebutuhan */
+    height: auto; /* Biarkan tinggi mengikuti proporsi */
+    margin: 20px auto; /* Pusatkan elemen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff; /* Tambahkan latar putih */
+}
+.dashboard-wrapper {
+  display: flex;
+  height: 100%; /* Kontainer fleksibel untuk tinggi penuh */
+}
+.sidebar {
+  width: 20%; /* Atur lebar sidebar */
+  background-color: #f8f9fa; /* Sesuaikan warna */
+}
+.main-content {
+  flex: 1; /* Isi sisa ruang yang ada */
+  padding: 20px;
+  overflow-y: auto; /* Jika konten terlalu panjang, tambahkan scroll */
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Pastikan lebar navbar sesuai layar */
+    height: 60px; /* Sesuaikan tinggi navbar */
+    background-color: #fff; /* Warna background */
+    z-index: 1000; /* Pastikan navbar berada di atas elemen lain */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan untuk estetika */
+}

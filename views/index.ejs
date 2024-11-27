@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <h1>YOOOO</h1>
+    <!-- cara bikin variabel dalam ejs -->
+     <!-- cara memanggil variabel dalam ejs -->
+      <h2>halo nama saya <%= nama %></h2>
+      <h4> daftar nama mahasiswa :</h4>
+      <% if (mahasiswa.length < 1) { %>
+            <p> data mahasiswa masih kosong</p>
+      <% } %>
+      <% mahasiswa.forEach(mhs => { %>
+        <ul>
+            <li>nama mahasiswa = <%= mhs.nama %></li>
+            <li>email = <%= mhs.email %></li>
+          </ul>
+      <% }) %>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,81 @@
+  <!-- views/index.html -->
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Dashboard</title>
+    <link rel="stylesheet" href="belajar.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <div class="profile">
+          <img src="Lelouch.jpg" alt="Agung Rezalky">
+          <h3>Agung Rezalky</h3>
+        </div>
+        <nav>
+          <a href="#">Dashboard</a>
+          <a href="#">Course Manage</a>
+          <a href="#">Quiz</a>
+          <a href="#">Users</a>
+        </nav>
+        <button class="logout">Logout</button>
+      </div>
+      <div class="main-content">
+        <h2>Dashboard Admin</h2>
+        <div class="metrics">
+          <a href="#"><div class="metric">
+            
+            <h3>Total semua course</h3>
+            <p>18</p>
+          </div>
+        </a>
+          <a href="#"><div class="metric">
+            <h3>Total semua quiz</h3>
+            <p>20</p>
+          </div>
+        </a>
+          <a href="#"><div class="metric">
+            <h3>Banyak user yang bergabung</h3>
+            <p>37</p>
+          </div>
+        </a>
+          <a href="#"><div class="metric">
+            <h3>Total semua materi</h3>
+            <p>38</p>
+          </div>
+        </a>
+          <a href="#"><div class="metric">
+            <h3>Total materi berbentuk PPT</h3>
+            <p>13</p>
+          </div>
+        </a>
+          <a href="#"><div class="metric">
+            <h3>Total materi berbentuk pdf</h3>
+            <p>10</p>
+          </div>
+        </a>
+          <a href="#"><div class="metric">
+            <h3>Total materi berbentuk VIDEO</h3>
+            <p>15</p>
+          </div>
+        </a>
+        </div>
+        <div class="pie-chart">
+          <img src="/chart" alt="Pie Chart">
+          <!-- Pie chart goes here -->
+        </div>
+      </div>
+    </div>
+    <script>
+      async function loadChart() {
+        const response = await fetch('/chart');
+        const chartHTML = await response.text(); // Mendapatkan respon dari Python
+        document.querySelector('.pie-chart').innerHTML = chartHTML; // Masukkan chart ke div
+      }
+      // Panggil fungsi loadChart setelah halaman dimuat
+      window.onload = loadChart;
+    </script>
+  </body>
+  </html>
